@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เกมเขาวงกตอวกาศ - ระดับปานกลาง</title>
+  <link rel="stylesheet" href="/css/stylemainmedium.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-pane">
+      <h1 class="text-3xl text-center mb-4">🧑‍🚀 ระดับปานกลาง</h1>
+      <div id="canvasContainer" style="margin: 0 auto;"></div>
+    </div>
+    <div class="right-pane">
+      <div class="buttons">
+        <button id="moveBtn" class="btn command-btn">เดินหน้า</button>
+        <button id="rotateLeftBtn" class="btn command-btn">หมุนซ้าย</button>
+        <button id="rotateRightBtn" class="btn command-btn">หมุนขวา</button>
+      </div>
+      <div class="buttons">
+        <button id="runBtn" class="btn btn-primary">รัน</button>
+        <button id="resetBtn" class="btn btn-secondary">รีเซ็ต</button>
+        <button id="clearBtn" class="btn btn-secondary">ล้างคำสั่ง</button>
+      </div>
+      <div class="command-list" id="commandList">
+        <p class="text-gray-400 italic">ยังไม่มีคำสั่ง คลิกเพื่อเพิ่ม</p>
+      </div>
+      <div class="status">
+        <p id="output" class="status-output"></p>
+        <p id="direction">ทิศทาง: ขวา</p>
+        <p id="position">ตำแหน่ง: (0, 0)</p>
+        <p id="steps">จำนวนคำสั่ง: 0</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- กล่องแจ้งเตือน -->
+  <div id="alertOverlay">
+    <div id="alertBox">
+      <div id="alertMessage">หมดเวลา! คุณแพ้</div>
+      <button id="alertBtn">เริ่มใหม่</button>
+      <button id="homeBtn" style="display:none;" onclick="goHome()">หน้าหลัก</button>
+    </div>
+  </div>
+
+  <script src="/js/scriptmainmedium.js"></script>
+</body>
+
+</html>
